@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #00ff00;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.main-container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* LOGO */
+.logo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo {
+  width: 50px;
+}
+.logo-header h1 {
+  font-size: 32px;
+  color: #00ff00;
+}
+
+/* SECCIÓN PRINCIPAL: rostros + mapa */
+.upper-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Panel izquierdo */
+.left-panel {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.panel h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bordered {
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #000000;
+}
+
+/* Rostros */
+.rostros {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.rostro {
+  flex: 1;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+/* Placeholder de imagen */
+.image-placeholder {
+  height: 150px;
+  border: 1px solid #00ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #00ff00;
+  background-color: #000;
+}
+
+/* Panel derecho (mapa) */
+.right-panel {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mapa {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Botones principales */
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+}
+
+.green {
+  background-color: #00ff00;
+  color: black;
+}
+.green:hover {
+  background-color: #00cc00;
+}
+
+.green-outline {
+  background-color: transparent;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+}
+.green-outline:hover {
+  background-color: #002200;
+}
+
+/* TABLA */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 1px solid #00ff00;
+}
+
+.tabla th, .tabla td {
+  padding: 12px 15px;
+  border: 1px solid #00ff00;
+  text-align: left;
+}
+
+.tabla th {
+  background-color: #000;
+  font-weight: bold;
+  color: #00ff00;
+}
+
+.tabla tr:hover {
+  background-color: #002200;
+}
+
+.tabla a {
+  color: #00ff00;
+  text-decoration: underline;
+}
+.tabla a:hover {
+  color: #00cc00;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 768px) {
+  .upper-section {
+    flex-direction: column;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rostros {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rostro {
+    width: 80%;
+  }
+}
