@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  --neon-green: #00ff00;
+  --neon-green-dark: #00cc00;
+  --green-glow: #00ff00aa;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--neon-green);
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.main-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.logo {
+  width: 50px;
+}
+.logo-header h1 {
+  font-size: 32px;
+  color: var(--neon-green);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* AYUDA */
+.ayuda-content {
+  background-color: #000000;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid var(--neon-green);
+  box-shadow: 0 0 15px var(--green-glow);
+  line-height: 1.8;
+}
+
+.ayuda-content h2, h3, h4 {
+  font-family: 'Share Tech Mono', monospace;
+  margin-bottom: 15px;
+  color: var(--neon-green);
+}
+
+.ayuda-content ol,
+.ayuda-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.ayuda-content li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.tag {
+  background-color: var(--neon-green-dark);
+  color: black;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Notas especiales */
+.notas ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.notas li {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* BOTÓN REGRESO */
+.button-wrapper {
+  text-align: center;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.green-outline {
+  background-color: transparent;
+  border: 2px solid var(--neon-green);
+  color: var(--neon-green);
+}
+.green-outline:hover {
+  background-color: #002200;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
+  background: linear-gradient(-65deg, #000000, #003300, #000000, #00ff00);
+  background-size: 400% 400%;
+  animation: cyberGradient 8s ease infinite;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5); /* Capa oscura */
+}
+
+@keyframes cyberGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

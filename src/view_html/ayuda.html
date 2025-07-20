@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ayuda BitPraes</title>
-  <link rel="stylesheet" href="styles/style_index.css" />
+  <link rel="stylesheet" href="styles/style_ayuda.css" />
 </head>
 <body>
   <div class="main-container">
@@ -13,26 +13,33 @@
       <h1>BitPraes</h1>
     </header>
 
-    <div class="bordered" style="padding: 20px; margin-top: 20px; line-height: 1.7;">
+    <section class="ayuda-content bordered">
       <h2>¿Cómo usar BIT·PRAES?</h2>
-      <p>1. Inserta una imagen en el cuadro correspondiente. Asegúrate de que el rostro esté bien visible.</p>
-      <p>2. Da clic en "INICIAR BÚSQUEDA". El sistema analizará la imagen y detectará rostros.</p>
-      <p>3. Se mostrarán los rostros encontrados (máx. 3). Puedes hacer clic en cada uno para verlos ampliados.</p>
-      <p>4. Revisa las coordenadas geográficas relacionadas. Estas indican dónde han sido reconocidos los rostros.</p>
-      <p>5. Usa los siguientes botones según lo que necesites:</p>
-      <ul>
-        <li>Reanalizar Imagen: si hiciste cambios o el análisis falló.</li>
-        <li>Nuevo Análisis: limpia todo y permite cargar otra imagen.</li>
-        <li>Imprimir Resultados: genera un reporte en PDF.</li>
-        <li>Exportar Datos: guarda resultados como archivo.</li>
+      <ol>
+        <li><strong>Inserta una imagen</strong> en el área indicada o arrástrala desde tu sistema.</li>
+        <li>Haz clic en <span class="tag">INICIAR BÚSQUEDA</span> para analizar la imagen y detectar rostros.</li>
+        <li><strong>Visualiza los rostros encontrados</strong> (máximo 3) en el panel izquierdo.</li>
+        <li><strong>Consulta el mapa</strong> para ubicar los puntos donde se detectaron coincidencias.</li>
+        <li><strong>Revisa los resultados</strong> en la tabla de coordenadas y cámaras.</li>
+      </ol>
+
+      <h3>Funciones disponibles:</h3>
+      <ul class="acciones">
+        <li><span class="tag">REANALIZAR IMAGEN</span>: Si hiciste cambios o la búsqueda fue incorrecta.</li>
+        <li><span class="tag">IMPRIMIR RESULTADOS</span>: Abre el gestor de impresión para exportar tu análisis.</li>
+        <li><span class="tag">EXPORTAR RESULTADOS</span>: Guarda el resultado como archivo .PDF o .CSV.</li>
+        <li><span class="tag">AYUDA / INSTRUCCIONES</span>: Te lleva a esta ventana con instrucciones.</li>
       </ul>
-      <p><strong>Notas:</strong></p>
-      <ul>
-        <li>Formato recomendado: .JPG o .PNG.</li>
-        <li>La detección depende de la calidad de la imagen.</li>
-        <li>Este software es experimental. Verifica siempre los resultados.</li>
-      </ul>
-    </div>
+
+      <div class="notas">
+        <h4>Notas importantes:</h4>
+        <ul>
+          <li>Formatos permitidos: <strong>.JPG</strong>, <strong>.PNG</strong>.</li>
+          <li>Se recomienda usar imágenes nítidas y bien iluminadas.</li>
+          <li>Este sistema es <em>experimental</em>. Verifica manualmente la información antes de usarla como evidencia.</li>
+        </ul>
+      </div>
+    </section>
 
     <div class="button-wrapper">
       <button class="button green-outline" onclick="window.location.href='index.html'">

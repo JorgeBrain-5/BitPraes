@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalles - BitPraes</title>
+  <link rel="stylesheet" href="styles/style_detalle.css" />
+</head>
+
+<body>
+  <div class="detalle-container">
+    <aside class="detalle-izquierdo bordered">
+      <div class="back-btn" onclick="window.history.back()">⟵</div>
+      <h2 class="titulo-seccion">Detalles</h2>
+      <h3 class="subtitulo">LUGAR UBICADO</h3>
+      <ul class="lista-detalle">
+        <li><strong>Dirección estimada:</strong> Av. Homero 1500, Polanco, CDMX</li>
+        <li><strong>Tipo de zona:</strong> Comercial</li>
+        <li><strong>Fecha/Hora:</strong> 05/06/2025 - 14:37:12</li>
+        <li><strong>Coincidencia facial:</strong> 93.5%</li>
+        <li><strong>Cámara:</strong> #03 | Resolución: 1080p | Visión Nocturna</li>
+        <li><strong>Tiempo visible:</strong> 12 segundos</li>
+        <li><strong>Ruta estimada:</strong> Hacia Av. Ejército Nacional</li>
+      </ul>
+    </aside>
+
+    <section class="detalle-derecho bordered">
+      <header class="logo-header">
+        <img src="img/logo.png" alt="Logo BitPraes" class="logo" />
+        <h1>BitPraes</h1>
+      </header>
+
+      <div class="video-container">
+        <h2>VIDEO - Cámara 03</h2>
+        <span class="play-btn" id="playButton">▶️</span>
+      </div>
+
+      <div class="acciones">
+        <button id="verMapa">VER MAPA</button>
+        <button id="verRuta">VER RUTA ESTIMADA</button>
+        <button id="verFotograma">VER FOTOGRAMA</button>
+        <button id="verVideoCompleto">VER VIDEO COMPLETO</button>
+        <button>GENERAR REPORTE</button>
+        <button>MARCAR VALIDADO</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- MODAL VIDEO -->
+  <div id="videoModal" class="modal-video" style="display: none;">
+    <div class="modal-video-content">
+      <span class="close-video" id="closeVideo">&times;</span>
+      <img src="img/video_simulado.png" alt="Simulación de video" class="video-placeholder" />
+    </div>
+  </div>
+
+  <!-- Modal Mapa -->
+  <div id="mapaModal" class="modal-mapa" style="display: none;">
+    <span class="close-mapa" id="closeMapa">&times;</span>
+    <div class="modal-mapa-content">
+      <img src="img/mapa_detalle.png" alt="Mapa Detallado" class="mapa-imagen" />
+    </div>
+  </div>
+
+  <!-- MODAL RUTA ESTIMADA -->
+  <div id="rutaModal" class="modal-mapa" style="display: none;">
+    <span class="close-mapa" id="closeRuta">&times;</span>
+    <div class="modal-mapa-content">
+      <img src="img/ruta_estimacion.png" alt="Ruta Estimada" class="mapa-imagen" />
+    </div>
+  </div>
+
+  <!-- MODAL FOTOGRAMA -->
+  <div id="fotogramaModal" class="modal-mapa" style="display: none;">
+    <span class="close-mapa" id="closeFotograma">&times;</span>
+    <div class="modal-mapa-content">
+      <img src="img/fotograma.png" alt="Fotograma" class="mapa-imagen" />
+    </div>
+  </div>
+
+
+  <script src="scripts/script_detalle.js"></script>
+</body>
+
+</html>
