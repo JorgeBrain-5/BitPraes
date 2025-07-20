@@ -41,7 +41,7 @@
         <button id="verRuta">VER RUTA ESTIMADA</button>
         <button id="verFotograma">VER FOTOGRAMA</button>
         <button id="verVideoCompleto">VER VIDEO COMPLETO</button>
-        <button>GENERAR REPORTE</button>
+        <button id="generarReporte">GENERAR REPORTE</button>
         <button>MARCAR VALIDADO</button>
       </div>
     </section>
@@ -79,6 +79,22 @@
     </div>
   </div>
 
+  <!-- MODAL DE GENERAR REPORTE -->
+  <div id="modal-generar-reporte" class="modal-generar">
+    <div class="modal-generar-content">
+      <h2>Generando reporte con IA...</h2>
+      <p>Por favor espere unos segundos mientras preparamos su archivo.</p>
+    </div>
+  </div>
+
+  <!-- Modal de verificación -->
+  <div id="verificacionModal" class="verificacion-modal">
+    <svg viewBox="0 0 52 52" class="checkmark" xmlns="http://www.w3.org/2000/svg">
+      <circle class="circle" cx="26" cy="26" r="23" fill="none" stroke-width="4" />
+      <path class="check" fill="none" stroke-width="4" d="M14 27l7 7 17-17" />
+    </svg>
+    <span class="verificado-texto">VERIFICADO</span>
+  </div>
 
   <script src="scripts/script_detalle.js"></script>
 </body>

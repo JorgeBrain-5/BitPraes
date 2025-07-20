@@ -79,3 +79,69 @@ window.addEventListener("click", (e) => {
     fotogramaModal.style.display = "none";
   }
 });
+
+const generarReporteBtn = document.getElementById("generarReporte");
+const modalGenerar = document.getElementById("modal-generar-reporte");
+
+generarReporteBtn.addEventListener("click", () => {
+  // Mostrar modal
+  modalGenerar.style.display = "flex";
+
+  // Esperar 6 segundos y luego descargar
+  setTimeout(() => {
+    modalGenerar.style.display = "none";
+
+    // Crear y activar descarga
+    const link = document.createElement("a");
+    link.href = "docs/reporte_bitpraes.pdf"; // Ajusta según tu ruta
+    link.download = "reporte_bitpraes.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }, 6000);
+});
+
+const validarBtn = document.querySelector("button:last-of-type");
+const modalVerificacion = document.getElementById("verificacionModal");
+
+validarBtn.addEventListener("click", () => {
+  const confirmar = confirm("¿Estás seguro de que los datos han sido validados correctamente?");
+
+  if (confirmar) {
+    const check = modalVerificacion.querySelector(".check");
+    const circle = modalVerificacion.querySelector(".circle");
+    const texto = modalVerificacion.querySelector(".verificado-texto");
+
+    // Reiniciar animaciones
+    check.style.animation = "none";
+    circle.style.animation = "none";
+    texto.style.animation = "none";
+
+    check.offsetHeight;
+    circle.offsetHeight;
+    texto.offsetHeight;
+
+    // Reset valores de trazo
+    check.style.strokeDashoffset = "48";
+    circle.style.strokeDashoffset = "157";
+    texto.style.opacity = "0";
+
+    // Mostrar modal
+    modalVerificacion.classList.add("mostrar");
+
+    // Disparar animaciones
+    setTimeout(() => {
+      circle.style.animation = "drawCircle 0.5s ease forwards";
+      check.style.animation = "drawCheck 0.5s ease 0.2s forwards";
+      texto.style.animation = "fadeText 1s ease-in-out 0.6s forwards";
+    }, 50);
+
+    // Ocultar modal después de 2.5 segundos
+    setTimeout(() => {
+      modalVerificacion.classList.remove("mostrar");
+    }, 2500);
+  } else {
+    alert("Verifica los datos nuevamente.");
+    window.location.href = "index.html";
+  }
+});
