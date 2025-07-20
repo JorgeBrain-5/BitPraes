@@ -36,7 +36,8 @@
       <button class="button green-outline">REANALIZAR IMAGEN</button>
       <button class="button green-outline">IMPRIMIR RESULTADOS</button>
       <button class="button green-outline">EXPORTAR RESULTADOS</button>
-      <button class="button green-outline">AYUDA / INSTRUCCIONES</button>
+      <button class="button green-outline" onclick="window.location.href='ayuda.html'">AYUDA / INSTRUCCIONES</button>
+
     </div>
 
     <table class="tabla">
@@ -74,5 +75,39 @@
       </tbody>
     </table>
   </div>
+
+  <!-- Modal de carga de imagen -->
+  <div class="modal" id="modalCarga">
+    <div class="modal-content">
+      <span class="close" id="closeCarga">&times;</span>
+      <h2>Subir imagen para análisis</h2>
+
+      <div class="drop-area" id="dropArea">
+        <p>Arrastra y suelta tu imagen aquí o haz clic para seleccionarla</p>
+        <input type="file" accept="image/*" id="inputImagen" hidden />
+        <p id="fileName" class="file-name"></p>
+      </div>
+
+      <button class="button green" id="aceptarCarga">Aceptar</button>
+    </div>
+  </div>
+
+  <!-- Modal de exportación -->
+  <div class="modal" id="modalExportar">
+    <div class="modal-content">
+      <span class="close" id="closeExportar">&times;</span>
+      <h2>Exportar resultados</h2>
+      <select id="tipoExportacion" class="export-select">
+        <option value="" disabled selected>Selecciona el tipo de archivo</option>
+        <option value="PDF">PDF</option>
+        <option value="CSV">CSV</option>
+        <option value="XLSX">Excel (.xlsx)</option>
+      </select>
+      <button class="button green" id="exportarArchivo">Exportar</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="scripts/script_index.js"></script>
 </body>
 </html>
